@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="About - Headen Tech Solutions"
+  description="Learn about Headen Tech Solutions mission, values, and team focused on delivering AI and data solutions for federal agencies."
+>
+  <Header />
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-800 to-primary-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">About Headen Tech Solutions</h1>
+          <p class="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+            Mission-driven technology solutions for federal agencies, delivered with security and compliance at the core.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-3xl font-semibold text-neutral-900 mb-6">Our Mission</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed mb-6">
+              To deliver mission-critical AI, data, and geospatial solutions that enhance federal agency capabilities 
+              while maintaining the highest standards of security and compliance.
+            </p>
+            <p class="text-neutral-700 leading-relaxed">
+              We believe that technology should serve the mission, not complicate it. Our solutions are designed 
+              to integrate seamlessly into existing federal workflows while providing measurable improvements 
+              in efficiency, accuracy, and decision-making capabilities.
+            </p>
+          </div>
+          
+          <div>
+            <h2 class="text-3xl font-semibold text-neutral-900 mb-6">Our Values</h2>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-neutral-900 mb-2">Security First</h3>
+                  <p class="text-neutral-700">Every solution is built with security and compliance as foundational principles.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-neutral-900 mb-2">Mission Alignment</h3>
+                  <p class="text-neutral-700">Our technology solutions directly support and enhance federal mission objectives.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-neutral-900 mb-2">Innovation</h3>
+                  <p class="text-neutral-700">We leverage cutting-edge AI and data technologies to solve complex federal challenges.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-neutral-900 mb-2">Transparency</h3>
+                  <p class="text-neutral-700">We provide clear, explainable AI solutions that build trust and enable informed decision-making.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Bio -->
+    <section class="py-16 bg-neutral-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Leadership</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Experienced professionals dedicated to federal mission success.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200 max-w-4xl mx-auto">
+          <div class="text-center">
+            <div class="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-primary-600">HTS</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-neutral-900 mb-4">Founder & Leadership Team</h3>
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Our leadership team brings decades of combined experience in federal contracting, 
+              AI/ML development, and secure cloud implementations. We understand the unique 
+              challenges and requirements of federal agencies and are committed to delivering 
+              solutions that meet the highest standards of security and compliance.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+              <div class="bg-neutral-100 rounded-lg p-4">
+                <h4 class="font-semibold text-neutral-900 mb-2">Federal Experience</h4>
+                <p class="text-neutral-700">15+ years in federal contracting and compliance</p>
+              </div>
+              <div class="bg-neutral-100 rounded-lg p-4">
+                <h4 class="font-semibold text-neutral-900 mb-2">Technical Expertise</h4>
+                <p class="text-neutral-700">AI/ML, data engineering, and cloud architecture</p>
+              </div>
+              <div class="bg-neutral-100 rounded-lg p-4">
+                <h4 class="font-semibold text-neutral-900 mb-2">Security Focus</h4>
+                <p class="text-neutral-700">FedRAMP, NIST, and cybersecurity best practices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Our Journey</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Key milestones in our mission to serve federal agencies.
+          </p>
+        </div>
+        
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+              <span class="text-white font-bold">2024</span>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-card border border-neutral-200 flex-1">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-2">Company Founded</h3>
+              <p class="text-neutral-700">Headen Tech Solutions established with focus on federal AI and data solutions.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+              <span class="text-primary-600 font-bold">2024</span>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-card border border-neutral-200 flex-1">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-2">Azure Government Partnership</h3>
+              <p class="text-neutral-700">Established partnership with Microsoft Azure Government for secure cloud solutions.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+              <span class="text-primary-600 font-bold">2024</span>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-card border border-neutral-200 flex-1">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-2">FedRAMP High Compliance</h3>
+              <p class="text-neutral-700">Achieved FedRAMP High compliance for federal agency deployments.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+              <span class="text-accent-600 font-bold">Future</span>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-card border border-neutral-200 flex-1">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-2">Expanding Capabilities</h3>
+              <p class="text-neutral-700">Growing our team and capabilities to serve more federal agencies with innovative solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="py-16 bg-primary-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">What Sets Us Apart</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Key differentiators that make us the right choice for federal agencies.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-6 shadow-card border border-neutral-200 text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-3">Security-First Approach</h3>
+            <p class="text-neutral-700 text-sm">Built-in security and compliance from day one, not added as an afterthought.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 shadow-card border border-neutral-200 text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-3">Federal Focus</h3>
+            <p class="text-neutral-700 text-sm">Dedicated exclusively to federal agencies with deep understanding of requirements.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 shadow-card border border-neutral-200 text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-3">Proven Technology</h3>
+            <p class="text-neutral-700 text-sm">Leveraging mature, enterprise-grade technologies with federal track records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>

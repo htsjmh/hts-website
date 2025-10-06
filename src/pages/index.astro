@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import FeatureList from '../components/FeatureList.astro';
+import TrustBadges from '../components/TrustBadges.astro';
+import CTAButton from '../components/CTAButton.astro';
+
+const capabilities = [
+  "Mission-aligned AI/ML (classification, forecasting, decision support)",
+  "Geospatial analytics & dashboards (situational awareness, field ops)",
+  "Data engineering & pipelines (ingest, quality, lineage)",
+  "Secure software delivery (DevSecOps, IaC, observability)"
+];
+---
+
+<BaseLayout 
+  title="Headen Tech Solutions - AI & Data Solutions in Azure Government"
+  description="Headen Tech Solutions delivers AI & data solutions in Azure Government for federal agencies. Secure, compliant, mission-focused."
+>
+  <Header />
+  
+  <main id="main-content">
+    <Hero />
+    
+    <!-- Services Preview -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Our Capabilities</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            We deliver mission-critical AI, data, and geospatial solutions within secure Azure Government environments.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {capabilities.map((capability, index) => (
+            <div class="bg-white rounded-2xl p-6 shadow-card hover:shadow-md transition-shadow duration-200 border border-neutral-200">
+              <div class="flex items-center mb-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-3">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-neutral-900">Service {index + 1}</h3>
+              </div>
+              <p class="text-neutral-700 leading-relaxed">{capability}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <TrustBadges />
+
+    <!-- Process Overview -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Our Process</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            From initial consultation to deployment, we ensure secure, compliant delivery.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-primary-600">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Consultation</h3>
+            <p class="text-neutral-700">Understand your mission requirements and compliance needs</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-primary-600">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Design</h3>
+            <p class="text-neutral-700">Architect solutions within Azure Government boundaries</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-primary-600">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Deploy</h3>
+            <p class="text-neutral-700">Deliver and support your secure, mission-ready solution</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Teaser -->
+    <section class="py-16 bg-primary-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Ready to Get Started?</h2>
+        <p class="text-lg text-neutral-700 mb-8">
+          Contact our team to discuss your federal AI and data requirements.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <CTAButton href="https://portal.headentechsolutions.com" variant="accent" external>
+            Launch Secure Portal
+          </CTAButton>
+          <CTAButton href="/contact" variant="secondary">
+            Contact HTS
+          </CTAButton>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>

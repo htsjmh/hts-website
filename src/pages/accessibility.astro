@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Accessibility Statement - Headen Tech Solutions"
+  description="Accessibility statement for Headen Tech Solutions website. Our commitment to digital accessibility and WCAG 2.1 AA compliance."
+>
+  <Header />
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-800 to-primary-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Accessibility Statement</h1>
+          <p class="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+            Our commitment to digital accessibility and inclusive design for all users.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessibility Content -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg max-w-none">
+          <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Our Commitment</h2>
+            <p class="text-neutral-700 mb-6">
+              Headen Tech Solutions is committed to ensuring digital accessibility for people with disabilities. 
+              We continually improve the user experience for everyone and apply the relevant accessibility standards.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Conformance Status</h2>
+            <p class="text-neutral-700 mb-4">
+              This website strives to conform to WCAG 2.1 AA standards. We have implemented the following 
+              accessibility features:
+            </p>
+            <ul class="list-disc list-inside text-neutral-700 mb-6 space-y-2">
+              <li>Semantic HTML structure with proper heading hierarchy</li>
+              <li>Alternative text for images and visual content</li>
+              <li>Keyboard navigation support throughout the site</li>
+              <li>Sufficient color contrast ratios (4.5:1 minimum)</li>
+              <li>Focus indicators for interactive elements</li>
+              <li>Skip-to-content links for screen readers</li>
+              <li>Form labels and error messaging</li>
+              <li>Responsive design for various screen sizes</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Keyboard Navigation</h2>
+            <p class="text-neutral-700 mb-4">
+              This website can be navigated using only a keyboard. Use the following keys:
+            </p>
+            <ul class="list-disc list-inside text-neutral-700 mb-6 space-y-2">
+              <li><strong>Tab:</strong> Move forward through interactive elements</li>
+              <li><strong>Shift + Tab:</strong> Move backward through interactive elements</li>
+              <li><strong>Enter:</strong> Activate links and buttons</li>
+              <li><strong>Space:</strong> Activate buttons and checkboxes</li>
+              <li><strong>Arrow Keys:</strong> Navigate within menus and lists</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Screen Reader Support</h2>
+            <p class="text-neutral-700 mb-6">
+              This website is designed to work with screen readers and other assistive technologies. 
+              We use semantic HTML, proper ARIA labels, and descriptive text to ensure content is 
+              accessible to users with visual impairments.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Color and Contrast</h2>
+            <p class="text-neutral-700 mb-6">
+              We maintain sufficient color contrast ratios throughout the website. Text and background 
+              combinations meet WCAG 2.1 AA standards with a minimum contrast ratio of 4.5:1 for 
+              normal text and 3:1 for large text.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Forms and Interactive Elements</h2>
+            <p class="text-neutral-700 mb-4">
+              All forms include proper labels and error messaging. Interactive elements have:
+            </p>
+            <ul class="list-disc list-inside text-neutral-700 mb-6 space-y-2">
+              <li>Clear, descriptive labels</li>
+              <li>Error messages that identify the problem</li>
+              <li>Instructions for completing forms</li>
+              <li>Visible focus indicators</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Known Limitations</h2>
+            <p class="text-neutral-700 mb-6">
+              While we strive to make this website fully accessible, we acknowledge that there may 
+              be areas for improvement. We are continuously working to enhance accessibility and 
+              welcome feedback from users.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Feedback and Accommodations</h2>
+            <p class="text-neutral-700 mb-4">
+              If you encounter accessibility barriers or need accommodations, please contact us. 
+              We are committed to providing alternative formats and assistance as needed.
+            </p>
+            <div class="bg-neutral-100 rounded-lg p-4 mb-6">
+              <p class="text-neutral-700">
+                <strong>Email:</strong> 
+                <a href="mailto:consulting@headentechsolutions.com" class="text-primary-600 hover:text-primary-800 underline">
+                  consulting@headentechsolutions.com
+                </a>
+              </p>
+              <p class="text-neutral-700 mt-2">
+                <strong>Response Time:</strong> We typically respond within 24 hours
+              </p>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Testing and Evaluation</h2>
+            <p class="text-neutral-700 mb-6">
+              We regularly test this website using automated accessibility tools and manual 
+              testing methods. Our testing includes:
+            </p>
+            <ul class="list-disc list-inside text-neutral-700 mb-6 space-y-2">
+              <li>Automated accessibility scanning tools</li>
+              <li>Keyboard-only navigation testing</li>
+              <li>Screen reader compatibility testing</li>
+              <li>Color contrast verification</li>
+              <li>User testing with people with disabilities</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Ongoing Improvements</h2>
+            <p class="text-neutral-700 mb-6">
+              We are committed to continuous improvement of our website's accessibility. 
+              This includes regular updates, user feedback integration, and staying current 
+              with accessibility best practices and standards.
+            </p>
+            
+            <div class="bg-primary-100 border border-primary-300 rounded-lg p-4 mt-8">
+              <p class="text-primary-800 text-sm">
+                <strong>Last Updated:</strong> December 2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>

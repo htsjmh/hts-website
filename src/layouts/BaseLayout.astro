@@ -1,0 +1,143 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, description = "Headen Tech Solutions delivers AI & data solutions in Azure Government for federal agencies. Secure, compliant, mission-focused.", canonical } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonical || Astro.url} />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    
+    <!-- Preload system fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Headen Tech Solutions" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <title>{title}</title>
+    
+    <!-- Accessibility: Skip to content link -->
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #266AA6;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 1000;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        top: 6px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans text-neutral-900 bg-white antialiased">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <slot />
+    
+    <!-- Consent Banner Component -->
+    <div id="consent-banner" class="hidden"></div>
+    
+    <!-- Analytics (only loads after consent) -->
+    <script>
+      // Consent management
+      let consentGiven = localStorage.getItem('hts-analytics-consent') === 'true';
+      
+      function showConsentBanner() {
+        const banner = document.getElementById('consent-banner');
+        if (!consentGiven && banner) {
+          banner.innerHTML = `
+            <div class="fixed bottom-0 left-0 right-0 bg-primary-800 text-white p-4 z-50">
+              <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-sm">
+                  <p>We use analytics to improve our website. No personal data is collected.</p>
+                </div>
+                <div class="flex gap-2">
+                  <button onclick="acceptAnalytics()" class="bg-accent-500 hover:bg-accent-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-accent-300">
+                    Accept
+                  </button>
+                  <button onclick="declineAnalytics()" class="bg-neutral-500 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-300">
+                    Decline
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+          banner.classList.remove('hidden');
+        }
+      }
+      
+      function acceptAnalytics() {
+        localStorage.setItem('hts-analytics-consent', 'true');
+        consentGiven = true;
+        document.getElementById('consent-banner').classList.add('hidden');
+        // Load analytics here when ready
+        // loadMatomo();
+      }
+      
+      function declineAnalytics() {
+        localStorage.setItem('hts-analytics-consent', 'false');
+        document.getElementById('consent-banner').classList.add('hidden');
+      }
+      
+      // Show banner on page load if no consent given
+      document.addEventListener('DOMContentLoaded', showConsentBanner);
+      
+      // Matomo analytics (commented out - uncomment when ready)
+      /*
+      function loadMatomo() {
+        var _paq = window._paq = window._paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="//YOUR_MATOMO_URL/";
+          _paq.push(['setTrackerUrl', u+'matomo.php']);
+          _paq.push(['setSiteId', 'YOUR_SITE_ID']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+      }
+      */
+    </script>
+  </body>
+</html>

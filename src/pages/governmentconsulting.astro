@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ComplianceStatement from '../components/ComplianceStatement.astro';
+import CTAButton from '../components/CTAButton.astro';
+
+const outcomes = [
+  "Enhanced mission effectiveness through AI-driven insights",
+  "Improved data quality and lineage tracking",
+  "Streamlined geospatial analysis and visualization",
+  "Accelerated software delivery with DevSecOps practices",
+  "Reduced compliance burden through automated controls",
+  "Increased operational efficiency and cost savings"
+];
+
+const contracts = {
+  uei: "TBD",
+  duns: "TBD", 
+  cage: "TBD",
+  naics: ["541511", "541512", "541519", "541690"],
+  psc: ["D399", "D399A", "D399B", "D399C"]
+};
+---
+
+<BaseLayout 
+  title="Government Consulting - Headen Tech Solutions"
+  description="Federal government consulting services for AI, data, and geospatial solutions in Azure Government. FedRAMP High compliant."
+>
+  <Header />
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-800 to-primary-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Government Consulting</h1>
+          <p class="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+            Dedicated federal division providing AI/ML, data engineering, geospatial analytics, 
+            and secure software solutions within Azure Government environments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Provide -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">What HTS Provides to Government</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Our federal consulting services focus on mission-critical capabilities delivered securely.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+            <h3 class="text-xl font-semibold text-neutral-900 mb-4">AI & Machine Learning</h3>
+            <ul class="space-y-3 text-neutral-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Explainable AI for decision support systems</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Classification and forecasting models</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Mission-aligned model development</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+            <h3 class="text-xl font-semibold text-neutral-900 mb-4">Data & Geospatial</h3>
+            <ul class="space-y-3 text-neutral-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Geospatial analytics and dashboards</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Data engineering and pipeline development</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Secure software delivery (DevSecOps)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="py-16 bg-neutral-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Mission Outcomes</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Procurement-friendly outcomes that deliver measurable value to federal agencies.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {outcomes.map((outcome, index) => (
+            <div class="bg-white rounded-xl p-6 shadow-card border border-neutral-200">
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                  <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <p class="text-neutral-700 font-medium">{outcome}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance Statement -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ComplianceStatement />
+      </div>
+    </section>
+
+    <!-- Contracts & Codes -->
+    <section class="py-16 bg-neutral-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Contracts & Codes</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Small business status and federal contracting information.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+            <h3 class="text-xl font-semibold text-neutral-900 mb-6">Business Information</h3>
+            <div class="space-y-4">
+              <div>
+                <span class="font-semibold text-neutral-900">Small Business Status:</span>
+                <span class="text-neutral-700 ml-2">Yes</span>
+              </div>
+              <div>
+                <span class="font-semibold text-neutral-900">UEI:</span>
+                <span class="text-neutral-700 ml-2">{contracts.uei}</span>
+              </div>
+              <div>
+                <span class="font-semibold text-neutral-900">DUNS:</span>
+                <span class="text-neutral-700 ml-2">{contracts.duns}</span>
+              </div>
+              <div>
+                <span class="font-semibold text-neutral-900">CAGE:</span>
+                <span class="text-neutral-700 ml-2">{contracts.cage}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+            <h3 class="text-xl font-semibold text-neutral-900 mb-6">NAICS & PSC Codes</h3>
+            <div class="space-y-4">
+              <div>
+                <span class="font-semibold text-neutral-900">NAICS:</span>
+                <div class="text-neutral-700 ml-2">
+                  {contracts.naics.map(code => (
+                    <span class="inline-block bg-neutral-100 px-2 py-1 rounded text-sm mr-2">{code}</span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <span class="font-semibold text-neutral-900">PSC:</span>
+                <div class="text-neutral-700 ml-2">
+                  {contracts.psc.map(code => (
+                    <span class="inline-block bg-neutral-100 px-2 py-1 rounded text-sm mr-2">{code}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-primary-100 border border-primary-300 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-primary-800 mb-2">Partnering Opportunities</h3>
+          <p class="text-primary-700">
+            HTS welcomes partnering opportunities as both prime and subcontractor. 
+            We specialize in AI/ML, data engineering, and geospatial solutions for federal agencies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capability Statement -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-semibold text-neutral-900 mb-6">Capability Statement</h2>
+        <p class="text-lg text-neutral-700 mb-8">
+          Download our comprehensive capability statement for detailed information about our federal services.
+        </p>
+        <CTAButton href="/assets/pdfs/HTS_Capability_Statement.pdf" variant="primary" external>
+          Request Capability Statement (PDF)
+        </CTAButton>
+      </div>
+    </section>
+
+    <!-- CTA Row -->
+    <section class="py-16 bg-primary-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-semibold text-neutral-900 mb-6">Ready to Partner?</h2>
+        <p class="text-lg text-neutral-700 mb-8">
+          Connect with our federal consulting team to discuss your mission requirements.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <CTAButton href="https://portal.headentechsolutions.com" variant="accent" external>
+            Launch Secure Portal
+          </CTAButton>
+          <CTAButton href="/contact" variant="secondary">
+            Contact HTS
+          </CTAButton>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>

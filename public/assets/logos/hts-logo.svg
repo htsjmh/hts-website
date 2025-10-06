@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#266AA6" rx="8"/>
+  <text x="100" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">HTS</text>
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#DCE8F5">Headen Tech Solutions</text>
+</svg>
+

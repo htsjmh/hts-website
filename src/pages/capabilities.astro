@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FeatureList from '../components/FeatureList.astro';
+import CTAButton from '../components/CTAButton.astro';
+
+const capabilities = [
+  "Mission-aligned AI/ML (classification, forecasting, decision support)",
+  "Geospatial analytics & dashboards (situational awareness, field ops)",
+  "Data engineering & pipelines (ingest, quality, lineage)",
+  "Secure software delivery (DevSecOps, IaC, observability)"
+];
+
+const examples = [
+  {
+    category: "AI/ML Solutions",
+    description: "Developed explainable AI models for federal decision support systems, ensuring transparency and compliance with agency requirements."
+  },
+  {
+    category: "Geospatial Analytics", 
+    description: "Built interactive dashboards for situational awareness, enabling real-time monitoring of field operations and resource allocation."
+  },
+  {
+    category: "Data Engineering",
+    description: "Implemented robust data pipelines with quality controls and lineage tracking, ensuring data integrity and auditability."
+  },
+  {
+    category: "DevSecOps",
+    description: "Established secure software delivery practices with automated security scanning and compliance validation."
+  }
+];
+---
+
+<BaseLayout 
+  title="Capabilities - Headen Tech Solutions"
+  description="Comprehensive capabilities in AI/ML, geospatial analytics, data engineering, and secure software delivery for federal agencies."
+>
+  <Header />
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-800 to-primary-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Capabilities</h1>
+          <p class="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+            Comprehensive AI, data, and geospatial solutions designed for federal mission requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Core Capabilities</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Delivered within secure Azure Government environments with FedRAMP High compliance.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {capabilities.map((capability, index) => (
+            <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-7 h-7 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900">Capability {index + 1}</h3>
+              </div>
+              <p class="text-neutral-700 leading-relaxed">{capability}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Outcomes -->
+    <section class="py-16 bg-neutral-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Mission Outcomes</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Our capabilities deliver measurable value to federal agencies and their missions.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center shadow-card border border-neutral-200">
+            <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-2">Enhanced Decision Making</h3>
+            <p class="text-neutral-600 text-sm">AI-driven insights for mission-critical decisions</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center shadow-card border border-neutral-200">
+            <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-2">Data Quality</h3>
+            <p class="text-neutral-600 text-sm">Improved data integrity and lineage tracking</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center shadow-card border border-neutral-200">
+            <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-2">Operational Efficiency</h3>
+            <p class="text-neutral-600 text-sm">Streamlined processes and reduced costs</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center shadow-card border border-neutral-200">
+            <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-2">Security Compliance</h3>
+            <p class="text-neutral-600 text-sm">Automated controls and audit readiness</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examples -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-neutral-900 mb-4">Capability Examples</h2>
+          <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+            Real-world applications of our capabilities (no sensitive details).
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {examples.map((example, index) => (
+            <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-200">
+              <h3 class="text-xl font-semibold text-neutral-900 mb-4">{example.category}</h3>
+              <p class="text-neutral-700 leading-relaxed">{example.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Capability Statement -->
+    <section class="py-16 bg-primary-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-semibold text-neutral-900 mb-6">Detailed Capability Information</h2>
+        <p class="text-lg text-neutral-700 mb-8">
+          Download our comprehensive capability statement for detailed technical specifications and case studies.
+        </p>
+        <CTAButton href="/assets/pdfs/HTS_Capability_Statement.pdf" variant="primary" external>
+          Download Capability Statement (PDF)
+        </CTAButton>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-semibold text-neutral-900 mb-6">Ready to Discuss Your Needs?</h2>
+        <p class="text-lg text-neutral-700 mb-8">
+          Contact our team to explore how our capabilities can support your mission.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <CTAButton href="https://portal.headentechsolutions.com" variant="accent" external>
+            Launch Secure Portal
+          </CTAButton>
+          <CTAButton href="/contact" variant="secondary">
+            Contact HTS
+          </CTAButton>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>

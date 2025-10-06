@@ -1,0 +1,32 @@
+{
+  "name": "hts-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Headen Tech Solutions - Federal Government Contracting Website",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^4.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "federal",
+    "government",
+    "contracting",
+    "azure",
+    "accessibility",
+    "wcag"
+  ],
+  "author": "Headen Tech Solutions",
+  "license": "MIT"
+}
