@@ -1,0 +1,18 @@
+import { c as createComponent, m as maybeRenderHead, a as renderTemplate } from './astro/server-CILCCPF1.js';
+import 'kleur/colors';
+import 'html-escaper';
+import 'clsx';
+
+const $$ComplianceStatement = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section class="bg-neutral-100 border border-neutral-300 rounded-2xl p-6 md:p-8"> <div class="max-w-4xl mx-auto"> <h2 class="text-2xl font-semibold text-neutral-900 mb-6">Compliance Statement</h2> <div class="prose prose-lg max-w-none text-neutral-700"> <p class="mb-4">
+Headen Tech Solutions (HTS) operates with a public/static website for marketing and information only. 
+        No government data is collected or processed on the public site. All sensitive workloads and client data 
+        are handled exclusively within our Azure Government environment, which supports FedRAMP High baselines.
+</p> <p class="mb-4">
+Controls are aligned to NIST 800-53 and 800-171 requirements within the Azure Government boundary. 
+        Public-facing pages follow Section 508 / WCAG 2.1 AA accessibility practices. For operational access, 
+        users authenticate through Entra ID (Azure AD) in Azure Government.
+</p> <div class="bg-white border border-neutral-300 rounded-xl p-4 mt-6"> <h3 class="text-lg font-semibold text-neutral-900 mb-3">Security Architecture</h3> <ul class="space-y-2 text-sm"> <li class="flex items-start"> <svg class="w-5 h-5 text-status-success mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path> </svg> <span>Public website: Static content only, no data processing</span> </li> <li class="flex items-start"> <svg class="w-5 h-5 text-status-success mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path> </svg> <span>Sensitive workloads: Azure Government (FedRAMP High)</span> </li> <li class="flex items-start"> <svg class="w-5 h-5 text-status-success mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path> </svg> <span>Authentication: Entra ID (Azure AD) in Azure Government</span> </li> <li class="flex items-start"> <svg class="w-5 h-5 text-status-success mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path> </svg> <span>Accessibility: WCAG 2.1 AA compliant public pages</span> </li> </ul> </div> </div> </div> </section>`;
+}, "/Users/samaj/Documents/business/goverment_contracting/website/src/components/ComplianceStatement.astro", void 0);
+
+export { $$ComplianceStatement as $ };

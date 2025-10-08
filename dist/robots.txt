@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://headentechsolutions.com/sitemap.xml
+
+# Disallow sensitive areas (if any are added in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow all public pages
+Allow: /
+Allow: /governmentconsulting
+Allow: /capabilities
+Allow: /compliance
+Allow: /contracts-and-codes
+Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+Allow: /accessibility
+Allow: /status
