@@ -3,7 +3,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://headentechsolutions.com',
+  site: 'https://htsjmh.github.io',
+  base: '/hts-website/',
   integrations: [tailwind()],
   output: 'static',
   build: {

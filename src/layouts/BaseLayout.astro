@@ -14,11 +14,11 @@ const { title, description = "Headen Tech Solutions delivers AI & data solutions
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
     <link rel="canonical" href={canonical || Astro.url} />
     
     <!-- Global CSS -->
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/global.css`} />
     
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />

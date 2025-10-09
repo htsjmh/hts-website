@@ -3,7 +3,7 @@ import 'kleur/colors';
 import 'html-escaper';
 import 'clsx';
 
-const $$Astro = createAstro("https://headentechsolutions.com");
+const $$Astro = createAstro("https://htsjmh.github.io");
 const $$CTAButton = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$CTAButton;
