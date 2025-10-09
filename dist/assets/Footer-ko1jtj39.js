@@ -17,16 +17,16 @@ const $$Header = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Header;
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Government Consulting", href: "/governmentconsulting" },
-    { name: "Capabilities", href: "/capabilities" },
-    { name: "Compliance", href: "/compliance" },
-    { name: "Contracts & Codes", href: "/contracts-and-codes" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" }
+    { name: "Home", href: `${"/hts-website/"}` },
+    { name: "Government Consulting", href: `${"/hts-website/"}governmentconsulting/` },
+    { name: "Capabilities", href: `${"/hts-website/"}capabilities/` },
+    { name: "Compliance", href: `${"/hts-website/"}compliance/` },
+    { name: "Contracts & Codes", href: `${"/hts-website/"}contracts-and-codes/` },
+    { name: "About", href: `${"/hts-website/"}about/` },
+    { name: "Contact", href: `${"/hts-website/"}contact/` }
   ];
   const portalUrl = "https://portal.headentechsolutions.com";
-  return renderTemplate`${maybeRenderHead()}<header class="bg-white shadow-sm border-b border-neutral-300"> <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation"> <div class="flex justify-between items-center h-16"> <!-- Logo --> <div class="flex-shrink-0"> <a href="/" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg"> <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center"> <span class="text-white font-bold text-sm">HTS</span> </div> <span class="text-xl font-semibold text-neutral-900">Headen Tech Solutions</span> </a> </div> <!-- Desktop Navigation --> <div class="hidden md:block"> <div class="ml-10 flex items-baseline space-x-8"> ${navItems.map((item) => renderTemplate`<a${addAttribute(item.href, "href")} class="text-neutral-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg"${addAttribute(Astro2.url.pathname === item.href ? "page" : void 0, "aria-current")}> ${item.name} </a>`)} </div> </div> <!-- Portal Button --> <div class="hidden md:block"> <a${addAttribute(portalUrl, "href")} class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" target="_blank" rel="noopener noreferrer">
+  return renderTemplate`${maybeRenderHead()}<header class="bg-white shadow-sm border-b border-neutral-300"> <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation"> <div class="flex justify-between items-center h-16"> <!-- Logo --> <div class="flex-shrink-0"> <a${addAttribute("/hts-website/", "href")} class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg"> <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center"> <span class="text-white font-bold text-sm">HTS</span> </div> <span class="text-xl font-semibold text-neutral-900">Headen Tech Solutions</span> </a> </div> <!-- Desktop Navigation --> <div class="hidden md:block"> <div class="ml-10 flex items-baseline space-x-8"> ${navItems.map((item) => renderTemplate`<a${addAttribute(item.href, "href")} class="text-neutral-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg"${addAttribute(Astro2.url.pathname === item.href ? "page" : void 0, "aria-current")}> ${item.name} </a>`)} </div> </div> <!-- Portal Button --> <div class="hidden md:block"> <a${addAttribute(portalUrl, "href")} class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" target="_blank" rel="noopener noreferrer">
 Launch Secure Portal
 </a> </div> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-primary-600 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button"> <span class="sr-only">Open main menu</span> <!-- Hamburger icon --> <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-neutral-50 border-t border-neutral-300"> ${navItems.map((item) => renderTemplate`<a${addAttribute(item.href, "href")} class="text-neutral-700 hover:text-primary-600 block px-3 py-2 text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg"${addAttribute(Astro2.url.pathname === item.href ? "page" : void 0, "aria-current")}> ${item.name} </a>`)} <div class="pt-4"> <a${addAttribute(portalUrl, "href")} class="bg-primary-600 hover:bg-primary-700 text-white block px-3 py-2 text-base font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" target="_blank" rel="noopener noreferrer">
 Launch Secure Portal
@@ -43,23 +43,23 @@ Delivering AI & data solutions in Azure Government for federal agencies.
 consulting@headentechsolutions.com
 </a> </p> <p class="text-sm text-neutral-300"> <strong>Portal:</strong> <a${addAttribute(portalUrl, "href")} class="text-primary-300 hover:text-primary-200 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded" target="_blank" rel="noopener noreferrer">
 portal.headentechsolutions.com
-</a> </p> </div> </div> <!-- Quick Links --> <div> <h3 class="text-lg font-semibold mb-4">Quick Links</h3> <ul class="space-y-2"> <li> <a href="/governmentconsulting" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </p> </div> </div> <!-- Quick Links --> <div> <h3 class="text-lg font-semibold mb-4">Quick Links</h3> <ul class="space-y-2"> <li> <a${addAttribute(`${"/hts-website/"}governmentconsulting/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Government Consulting
-</a> </li> <li> <a href="/capabilities" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}capabilities/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Capabilities
-</a> </li> <li> <a href="/compliance" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}compliance/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Compliance
-</a> </li> <li> <a href="/contracts-and-codes" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}contracts-and-codes/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Contracts & Codes
-</a> </li> <li> <a href="/about" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}about/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 About
-</a> </li> </ul> </div> <!-- Legal & Accessibility --> <div> <h3 class="text-lg font-semibold mb-4">Legal & Accessibility</h3> <ul class="space-y-2"> <li> <a href="/privacy" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> </ul> </div> <!-- Legal & Accessibility --> <div> <h3 class="text-lg font-semibold mb-4">Legal & Accessibility</h3> <ul class="space-y-2"> <li> <a${addAttribute(`${"/hts-website/"}privacy/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Privacy Policy
-</a> </li> <li> <a href="/terms" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}terms/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Terms of Service
-</a> </li> <li> <a href="/accessibility" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}accessibility/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 Accessibility Statement
-</a> </li> <li> <a href="/status" class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
+</a> </li> <li> <a${addAttribute(`${"/hts-website/"}status/`, "href")} class="text-neutral-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded">
 System Status
 </a> </li> </ul> </div> </div> <!-- Bottom Bar --> <div class="border-t border-neutral-700 mt-8 pt-8"> <div class="flex flex-col md:flex-row justify-between items-center"> <p class="text-neutral-400 text-sm">
 © ${currentYear} Headen Tech Solutions. All rights reserved.

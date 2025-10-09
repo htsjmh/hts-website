@@ -1,13 +1,13 @@
 ---
 // Navigation items
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Government Consulting', href: '/governmentconsulting' },
-  { name: 'Capabilities', href: '/capabilities' },
-  { name: 'Compliance', href: '/compliance' },
-  { name: 'Contracts & Codes', href: '/contracts-and-codes' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' }
+  { name: 'Home', href: `${import.meta.env.BASE_URL}` },
+  { name: 'Government Consulting', href: `${import.meta.env.BASE_URL}governmentconsulting/` },
+  { name: 'Capabilities', href: `${import.meta.env.BASE_URL}capabilities/` },
+  { name: 'Compliance', href: `${import.meta.env.BASE_URL}compliance/` },
+  { name: 'Contracts & Codes', href: `${import.meta.env.BASE_URL}contracts-and-codes/` },
+  { name: 'About', href: `${import.meta.env.BASE_URL}about/` },
+  { name: 'Contact', href: `${import.meta.env.BASE_URL}contact/` }
 ];
 
 const portalUrl = 'https://portal.headentechsolutions.com';
@@ -18,7 +18,7 @@ const portalUrl = 'https://portal.headentechsolutions.com';
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg">
+        <a href={import.meta.env.BASE_URL} class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-lg">
           <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
             <span class="text-white font-bold text-sm">HTS</span>
           </div>
